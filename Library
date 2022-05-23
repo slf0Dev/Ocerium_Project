@@ -891,7 +891,7 @@ function UILibrary.Main(PrjName,HideKey)
 				DropdownListHeader.Size = UDim2.new(0, 334, 0, 39)
 				DropdownListHeader.Font = Enum.Font.GothamSemibold
 				DropdownListHeader.TextColor3 = Color3.fromRGB(255, 255, 255)
-				DropdownListHeader.TextSize = 20.000
+				DropdownListHeader.TextSize = 17.000
 				DropdownListHeader.Text = "  " .. placeholder
 				DropdownListHeader.TextXAlignment = Enum.TextXAlignment.Left
 
