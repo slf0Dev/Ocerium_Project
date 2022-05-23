@@ -956,7 +956,7 @@ function UILibrary.Main(PrjName,HideKey)
 				end)
 
 				local Drop = {}
-				local function NewSelectable(Text)
+				local function NewSelectable(Text,secfunc)
 
 					local SelectableButton = Instance.new("TextButton")
 					local SecFrame = Instance.new("Frame")
@@ -1006,7 +1006,7 @@ function UILibrary.Main(PrjName,HideKey)
 					
 
 					SelectableButton.MouseButton1Click:Connect(function()
-						spawn(function() func(Text) end)
+					spawn(function() secfunc() end)
 						IsSelectableChoosed.Value = true
 						TweenService:Create(SelectableButton,TweenInfo.new(0.25),{BackgroundTransparency = 0.3,BackgroundColor3 = Color3.fromRGB(1, 124, 255)}):Play()
 						for i,v in next,DropdownList:GetDescendants() do
@@ -1035,7 +1035,9 @@ function UILibrary.Main(PrjName,HideKey)
 				end
 
 				for _,str in next,Selectables do
-					NewSelectable(tostring(str))
+					NewSelectable(tostring(_),function()
+						spawn(function() func(str) end)
+					end)
 				end
 				
 				function Drop.Refresh(TableToRefresh)
@@ -1046,7 +1048,9 @@ function UILibrary.Main(PrjName,HideKey)
 						end
 					end
 					for _,str in next,Selectables do
-						NewSelectable(tostring(str))
+						NewSelectable(tostring(_),function()
+							spawn(function() func(str) end)
+						end)
 					end
 				end
 				return Drop;
