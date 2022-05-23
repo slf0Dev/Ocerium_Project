@@ -696,7 +696,7 @@ function UILibrary.Main(PrjName,HideKey)
 				ValueLabel.Position = UDim2.new(0.5, 0, -1.49128079, 0)
 				ValueLabel.Size = UDim2.new(0, 25, 0, 18)
 				ValueLabel.Font = Enum.Font.GothamSemibold
-				ValueLabel.Text = "10"
+				ValueLabel.Text = defvalue
 				ValueLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 				ValueLabel.TextSize = 14.000
 
