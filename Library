@@ -1146,43 +1146,4 @@ function UILibrary.Main(PrjName,HideKey)
 	end
 	return Tabs;
 end
-
-local MainMenu = UILibrary.Main("Test","LeftAlt")
-
-local Tab1 = MainMenu.NewTab("Test Tab 1")
-
-local Section1 = Tab1.NewSection("Test Section")
-
-local TestToggle1 = Section1.NewToggle("check me!",function(bool)
-	print(bool)
-end,false)
-local TestToggle2 = Section1.NewToggle("check me! [2]",function(bool)
-	print(bool)
-end,true)
-
-
-local SliderTest = Section1.NewSlider("Slide me!",0,100,false,function(value)
-	print(value)
-end,50)
-
-local dsa = game:GetChildren()
-
-local DropdownTest = Section1.NewDropdown("something",dsa,function(output)
-	print(output)
-end)
-
-local TestToggle3 = Section1.NewButton("Press me!",function()
-	DropdownTest.Refresh(game:GetChildren())
-end,true)
-
-local Section2 = Tab1.NewSection("Test Section [2]")
-
-local TestLabel = Section2.NewLabel("Meet my family. There are five of us – my parents, my elder brother, my baby sister and me. First, meet my mum and dad, Jane and Michael. My mum enjoys reading and my dad",true)
-
-local TestLabel2 = Section2.NewLabel("pee pee pee pee",false,18,Color3.fromRGB(0, 255, 127))
-
-local Section3 = Tab1.NewSection("Test Section [3]")
-local TestLabelWithCom3 = Section3.NewLabelWithComment("Updated the script",os.date(),false,18,Color3.fromRGB(0, 255, 127))
-
-
-local Tab2 = MainMenu.NewTab("Test Tab 2",true)
+return UILibrary;
