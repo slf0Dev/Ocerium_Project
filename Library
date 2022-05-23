@@ -68,7 +68,7 @@ function UILibrary.Main(PrjName,HideKey)
 	Main.Visible = true
 	UICorner.Parent = Main
 	UICorner.CornerRadius = UDim.new(0,8)
-	
+
 	local FadeBackgroundFrame = Instance.new("Frame")
 
 	FadeBackgroundFrame.Name = "FadeBackgroundFrame"
@@ -245,7 +245,7 @@ function UILibrary.Main(PrjName,HideKey)
 		local Elements = Instance.new("ScrollingFrame")
 		local FadeFrame = Instance.new("Frame")
 		local UIListLayout = Instance.new("UIListLayout")
-		
+
 		UIListLayout.Name = "ff"
 		UIListLayout.Parent = Elements
 		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -452,7 +452,7 @@ function UILibrary.Main(PrjName,HideKey)
 				Toggle.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 				Toggle.BorderSizePixel = 0
 				Toggle.Position = UDim2.new(0.286780387, 0, 0, 0)
-				Toggle.Size = UDim2.new(0.949999988, 0, 0, 40)
+				Toggle.Size = UDim2.new(1, 0, 0, 40)
 				Toggle.AutoButtonColor = false
 				Toggle.Font = Enum.Font.SourceSans
 				Toggle.Text = ""
@@ -463,8 +463,9 @@ function UILibrary.Main(PrjName,HideKey)
 				DownLine.Parent = Toggle
 				DownLine.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 				DownLine.BorderSizePixel = 0
-				DownLine.Size = UDim2.new(1.1,0,0,1)
-				DownLine.Position = UDim2.new(0,5,1,0)
+				DownLine.Size = UDim2.new(1,0,0,1)
+				DownLine.AnchorPoint = Vector2.new(0.5,0)
+				DownLine.Position = UDim2.new(0.53,0,1,0)
 
 				ToggleLabel.Name = "ToggleLabel"
 				ToggleLabel.Parent = Toggle
@@ -489,7 +490,7 @@ function UILibrary.Main(PrjName,HideKey)
 				Checker.AnchorPoint = Vector2.new(0, 0.5)
 				Checker.BackgroundColor3 = Color3.fromRGB(0, 123, 255)
 				Checker.BorderSizePixel = 0
-				Checker.Position = UDim2.new(0.95, 0, 0.5, 0)
+				Checker.Position = UDim2.new(0.935, 0, 0.5, 0)
 				Checker.Size = UDim2.new(0, 22, 0, 22)
 
 				CheckerStroke.Parent = Checker
@@ -629,7 +630,7 @@ function UILibrary.Main(PrjName,HideKey)
 				Slider.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 				Slider.BorderSizePixel = 0
 				Slider.Position = UDim2.new(0.286780387, 0, 0, 0)
-				Slider.Size = UDim2.new(0.949999988, 0, 0, 40)
+				Slider.Size = UDim2.new(1, 0, 0, 40)
 				Slider.AutoButtonColor = false
 				Slider.Font = Enum.Font.SourceSans
 				Slider.Text = ""
@@ -639,8 +640,9 @@ function UILibrary.Main(PrjName,HideKey)
 				Frame.Parent = Slider
 				Frame.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 				Frame.BorderSizePixel = 0
-				Frame.Position = UDim2.new(0, 5, 1, 0)
-				Frame.Size = UDim2.new(1.10000002, 0, 0, 1)
+				Frame.AnchorPoint = Vector2.new(0.5,0)
+				Frame.Position = UDim2.new(0.53, 0, 1, 0)
+				Frame.Size = UDim2.new(1, 0, 0, 1)
 
 				SliderLabel.Name = "SliderLabel"
 				SliderLabel.Parent = Slider
@@ -664,7 +666,7 @@ function UILibrary.Main(PrjName,HideKey)
 				Sliding.Parent = Slider
 				Sliding.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
 				Sliding.BorderSizePixel = 0
-				Sliding.Position = UDim2.new(0.6, 0, 0.421052635, 0)
+				Sliding.Position = UDim2.new(0.58, 0, 0.421052635, 0)
 				Sliding.Size = UDim2.new(0, 166, 0, 6)
 
 				SlidingCorner.CornerRadius = UDim.new(0, 15)
@@ -798,7 +800,7 @@ function UILibrary.Main(PrjName,HideKey)
 				Dropdown.BorderSizePixel = 0
 				Dropdown.ClipsDescendants = true
 				Dropdown.Position = UDim2.new(0.286780387, 0, 0, 0)
-				Dropdown.Size = UDim2.new(0.95, 0, 0, 40)
+				Dropdown.Size = UDim2.new(1, 0, 0, 40)
 				Dropdown.AutoButtonColor = false
 				Dropdown.Font = Enum.Font.GothamSemibold
 				Dropdown.Text = ""
@@ -821,8 +823,8 @@ function UILibrary.Main(PrjName,HideKey)
 				DropdownBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				DropdownBox.BackgroundTransparency = 1.000
 				DropdownBox.BorderSizePixel = 0
-				DropdownBox.Position = UDim2.new(0.0500000007, 0, 0, 0)
-				DropdownBox.Size = UDim2.new(0.949999988, 0, 0, 40)
+				DropdownBox.Position = UDim2.new(0.05, 0, 0, 0)
+				DropdownBox.Size = UDim2.new(0.95, 0, 0, 40)
 				DropdownBox.Font = Enum.Font.GothamSemibold
 				DropdownBox.Text = placeholder
 				DropdownBox.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -833,7 +835,7 @@ function UILibrary.Main(PrjName,HideKey)
 				Frame_2.AnchorPoint = Vector2.new(0.5, 0)
 				Frame_2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 				Frame_2.BorderSizePixel = 0
-				Frame_2.Position = UDim2.new(0.5, 0, 1, 0)
+				Frame_2.Position = UDim2.new(0.53, 0, 1, 0)
 				Frame_2.Size = UDim2.new(1, 0, 0, 1)
 
 				ImageLabel.Parent = DropdownBox
@@ -848,7 +850,7 @@ function UILibrary.Main(PrjName,HideKey)
 				ImageLabel.ImageRectOffset = Vector2.new(44, 404)
 				ImageLabel.ImageRectSize = Vector2.new(36, 36)
 				ImageLabel.Rotation = 90
-				
+
 				Tsd.Name = placeholder
 				Tsd.Parent = Main
 				Tsd.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -858,7 +860,7 @@ function UILibrary.Main(PrjName,HideKey)
 				Tsd.Size = UDim2.new(0, 360, 0, 270)
 				Tsd.ZIndex = 4
 				Tsd.Visible = true
-				
+
 				local CloseButton = Instance.new("TextButton")
 
 				CloseButton.Name = "CloseButton"
@@ -873,7 +875,7 @@ function UILibrary.Main(PrjName,HideKey)
 				CloseButton.TextColor3 = Color3.fromRGB(0, 124, 255)
 				CloseButton.TextSize = 15.000
 				CloseButton.ZIndex = 4
-				
+
 				CloseButton.MouseButton1Click:Connect(function()
 					TweenService:Create(ImageLabel,TweenInfo.new(0.3),{Rotation = 90}):Play()
 					TweenService:Create(FadeBackgroundFrame,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
@@ -910,29 +912,29 @@ function UILibrary.Main(PrjName,HideKey)
 				DropdownList.CanvasSize = UDim2.new(0, 0, 0, 0)
 				DropdownList.ScrollBarThickness = 3
 				DropdownList.AutomaticCanvasSize = Enum.AutomaticSize.Y
-				
+
 				local DropdownLineTop = Instance.new("Frame")
-				
+
 				local DropdownLineBottom = Instance.new("Frame")
-				
+
 				DropdownLineTop.Parent = Tsd
 				DropdownLineTop.AnchorPoint = Vector2.new(0.5, 0)
 				DropdownLineTop.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 				DropdownLineTop.BorderSizePixel = 0
 				DropdownLineTop.Position = UDim2.new(0.5, 0, 0, 54)
 				DropdownLineTop.Size = UDim2.new(1, 0, 0, 1)
-				
+
 				DropdownLineBottom.Parent = Tsd
 				DropdownLineBottom.AnchorPoint = Vector2.new(0.5, 0)
 				DropdownLineBottom.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 				DropdownLineBottom.BorderSizePixel = 0
 				DropdownLineBottom.Position = UDim2.new(0.5, 0, 0, 265)
 				DropdownLineBottom.Size = UDim2.new(1, 0, 0, 1)
-				
-				
+
+
 				UIListLayout.Parent = DropdownList
 				UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-				UIListLayout.Padding = UDim.new(0, 3)
+				UIListLayout.Padding = UDim.new(0, 0)
 				UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 
 				ignd.Name = "ignd"
@@ -970,7 +972,7 @@ function UILibrary.Main(PrjName,HideKey)
 					SelectableButton.BackgroundTransparency = 1
 					SelectableButton.BorderSizePixel = 0
 					SelectableButton.Position = UDim2.new(0.0412844047, 0, 0, 0)
-					SelectableButton.Size = UDim2.new(0.95, 0, 0, 40)
+					SelectableButton.Size = UDim2.new(1, 0, 0, 40)
 					SelectableButton.AutoButtonColor = false
 					SelectableButton.Font = Enum.Font.SourceSansSemibold
 					SelectableButton.Text = ""
@@ -985,7 +987,7 @@ function UILibrary.Main(PrjName,HideKey)
 					SelectableText.Position = UDim2.new(0.0799999982, 0, 0, 0)
 					SelectableText.Size = UDim2.new(0.920000017, 0, 1, 0)
 					SelectableText.Font = Enum.Font.SourceSansSemibold
-					SelectableText.Text = Text
+					SelectableText.Text = "    " .. Text
 					SelectableText.TextColor3 = Color3.fromRGB(255, 255, 255)
 					SelectableText.TextSize = 18.000
 					SelectableText.TextWrapped = true
@@ -993,44 +995,84 @@ function UILibrary.Main(PrjName,HideKey)
 
 					SelectableCorner.Parent = SelectableButton
 					SelectableCorner.CornerRadius = UDim.new(0,3)
-					
+
 					SecFrame.Parent = SelectableButton
 					SecFrame.AnchorPoint = Vector2.new(0.5, 0)
 					SecFrame.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 					SecFrame.BorderSizePixel = 0
-					SecFrame.Position = UDim2.new(0.5, 0, 1, 0)
+					SecFrame.Position = UDim2.new(0.5, 24, 1, 0)
 					SecFrame.Size = UDim2.new(1, 0, 0, 1)
+
+
+
+					local ChoosedCircle = Instance.new("Frame")
+					local InnerCircle = Instance.new("ImageButton")
+					local ChoosedCircleCorner = Instance.new("UICorner")
+					local ChoosedCircleStroke = Instance.new("UIStroke")
+
+					ChoosedCircle.Name = "ChoosedCircle"
+					ChoosedCircle.Parent = SelectableButton
+					ChoosedCircle.AnchorPoint = Vector2.new(0,0.5)
+					ChoosedCircle.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+					ChoosedCircle.BackgroundTransparency = 1.000
+					ChoosedCircle.BorderSizePixel = 0
+					ChoosedCircle.Position = UDim2.new(0, 5, 0.5, 0)
+					ChoosedCircle.Size = UDim2.new(0, 16, 0, 16)
+
+					InnerCircle.Name = "InnerCircle"
+					InnerCircle.Parent = ChoosedCircle
+					InnerCircle.AnchorPoint = Vector2.new(0.5, 0.5)
+					InnerCircle.BackgroundColor3 = Color3.fromRGB(0, 123, 255)
+					InnerCircle.BackgroundTransparency = 1.000
+					InnerCircle.BorderSizePixel = 0
+					InnerCircle.Position = UDim2.new(0.5, 0, 0.5, 0)
+					InnerCircle.Size = UDim2.new(0, 0, 0, 0)
+					InnerCircle.Image = "rbxassetid://3926305904"
+					InnerCircle.ImageRectOffset = Vector2.new(204, 484)
+					InnerCircle.ImageRectSize = Vector2.new(36, 36)
+					InnerCircle.ImageTransparency = 0
+
+
+					ChoosedCircleCorner.CornerRadius = UDim.new(0, 100)
+					ChoosedCircleCorner.Name = "ChoosedCircleCorner"
+					ChoosedCircleCorner.Parent = ChoosedCircle
+
+					ChoosedCircleStroke.Parent = ChoosedCircle
+					ChoosedCircleStroke.Name = "CircleStroke"
+					ChoosedCircleStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+					ChoosedCircleStroke.LineJoinMode = Enum.LineJoinMode.Round
+					ChoosedCircleStroke.Thickness = 1.3
+					ChoosedCircleStroke.Transparency = 0
+					ChoosedCircleStroke.Color = Color3.fromRGB(44, 44, 44)
+
 
 					IsSelectableChoosed.Name = "IsChoosed"
 
-					
+
 
 					SelectableButton.MouseButton1Click:Connect(function()
-					spawn(function() secfunc() end)
+						spawn(function() secfunc() end)
 						IsSelectableChoosed.Value = true
-						TweenService:Create(SelectableButton,TweenInfo.new(0.25),{BackgroundTransparency = 0.3,BackgroundColor3 = Color3.fromRGB(1, 124, 255)}):Play()
+						InnerCircle:TweenSize(UDim2.new(0,12,0,12),"In","Sine",0.15,true)
+						TweenService:Create(ChoosedCircle,TweenInfo.new(0.15),{BackgroundTransparency = 0}):Play()
+						TweenService:Create(ChoosedCircleStroke,TweenInfo.new(0.15),{Thickness = 0}):Play()
 						for i,v in next,DropdownList:GetDescendants() do
 							if v.Name == "IsChoosed" and v.Parent.Name ~= Text then
 								v.Value = false
+								TweenService:Create(v.Parent.ChoosedCircle.CircleStroke,TweenInfo.new(0.15),{Thickness = 1.3}):Play()
+								TweenService:Create(v.Parent.ChoosedCircle,TweenInfo.new(0.15),{BackgroundTransparency = 1}):Play()
+								v.Parent.ChoosedCircle.InnerCircle:TweenSize(UDim2.new(0,0,0,0),"Out","Sine",0.15,true)
 								TweenService:Create(v.Parent,TweenInfo.new(0.25),{BackgroundTransparency = 1,BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
 							end
 						end	
 					end)
-				
+
 					SelectableButton.MouseEnter:Connect(function()
-						if not IsSelectableChoosed.Value then
-							TweenService:Create(SelectableButton,TweenInfo.new(0.25),{BackgroundTransparency = 0.96}):Play()
-						else
-							TweenService:Create(SelectableButton,TweenInfo.new(0.25),{BackgroundTransparency = 0.5}):Play()
-						end
+						TweenService:Create(SelectableButton,TweenInfo.new(0.25),{BackgroundTransparency = 0.96}):Play()
 					end)
 
 					SelectableButton.MouseLeave:Connect(function()
-						if not IsSelectableChoosed.Value then
-							TweenService:Create(SelectableButton,TweenInfo.new(0.25),{BackgroundTransparency = 1}):Play()
-						else
-							TweenService:Create(SelectableButton,TweenInfo.new(0.25),{BackgroundTransparency = 0.7}):Play()
-						end
+						TweenService:Create(SelectableButton,TweenInfo.new(0.25),{BackgroundTransparency = 1}):Play()
 					end)
 				end
 
@@ -1039,7 +1081,7 @@ function UILibrary.Main(PrjName,HideKey)
 						spawn(function() func(str) end)
 					end)
 				end
-				
+
 				function Drop.Refresh(TableToRefresh)
 					print('updated')
 					for i,v in next,DropdownList:GetChildren() do
@@ -1068,7 +1110,7 @@ function UILibrary.Main(PrjName,HideKey)
 				Button.BackgroundTransparency = 1
 				Button.BorderSizePixel = 0
 				Button.Position = UDim2.new(0.0412844047, 0, 0, 0)
-				Button.Size = UDim2.new(0.95, 0, 0, 40)
+				Button.Size = UDim2.new(1, 0, 0, 40)
 				Button.AutoButtonColor = false
 				Button.Font = Enum.Font.SourceSansSemibold
 				Button.Text = ""
@@ -1080,12 +1122,12 @@ function UILibrary.Main(PrjName,HideKey)
 				ButtonText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				ButtonText.BackgroundTransparency = 1.000
 				ButtonText.BorderSizePixel = 0
-				ButtonText.Position = UDim2.new(0.0799999982, 0, 0, 0)
-				ButtonText.Size = UDim2.new(0.920000017, 0, 1, 0)
+				ButtonText.Position = UDim2.new(0.05,0, 0, 0)
+				ButtonText.Size = UDim2.new(1, 0, 1, 0)
 				ButtonText.Font = Enum.Font.SourceSansSemibold
 				ButtonText.Text = btnText
 				ButtonText.TextColor3 = Color3.fromRGB(255, 255, 255)
-				ButtonText.TextSize = 23.000
+				ButtonText.TextSize = 18
 				ButtonText.TextWrapped = true
 				ButtonText.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -1096,7 +1138,7 @@ function UILibrary.Main(PrjName,HideKey)
 				SecFrame.AnchorPoint = Vector2.new(0.5, 0)
 				SecFrame.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 				SecFrame.BorderSizePixel = 0
-				SecFrame.Position = UDim2.new(0.5, 0, 1, 0)
+				SecFrame.Position = UDim2.new(0.53, 0, 1, 0)
 				SecFrame.Size = UDim2.new(1, 0, 0, 1)
 
 				local IsMouseOn = false
@@ -1151,3 +1193,4 @@ function UILibrary.Main(PrjName,HideKey)
 	return Tabs;
 end
 return UILibrary;
+
