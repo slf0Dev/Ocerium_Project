@@ -73,7 +73,7 @@ function UILibrary.Main(PrjName,HideKey)
 
 	FadeBackgroundFrame.Name = "FadeBackgroundFrame"
 	FadeBackgroundFrame.Parent = Main
-	FadeBackgroundFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	FadeBackgroundFrame.BackgroundColor3 = Color3.fromRGB(27,27, 27)
 	FadeBackgroundFrame.BackgroundTransparency = 1.000
 	FadeBackgroundFrame.BorderSizePixel = 0
 	FadeBackgroundFrame.Size = UDim2.new(1, 0, 1, 0)
@@ -236,6 +236,59 @@ function UILibrary.Main(PrjName,HideKey)
 	local UISizer = Instance.new("UIScale")
 	UISizer.Parent = Library
 	UISizer.Scale = UILibrary["Options"]["Size"]
+	
+	function Tabs.Loader()
+		local Circles = Instance.new("Frame")
+		local obj = {}
+
+		Circles.Name = "Circles"
+		Circles.Parent = FadeBackgroundFrame
+		Circles.AnchorPoint = Vector2.new(0.5, 0.5)
+		Circles.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+		Circles.BackgroundTransparency = 1
+		Circles.BorderSizePixel = 0
+		Circles.ClipsDescendants = false
+		Circles.Position = UDim2.new(0.5, 0, 0.5, 0)
+		Circles.Size = UDim2.new(0, 50, 0, 50)
+		Circles.ZIndex = 4
+		TweenService:Create(FadeBackgroundFrame,TweenInfo.new(0.3),{BackgroundTransparency = 0}):Play()
+
+		for i = 1,4 do
+			local Circle = Instance.new("Frame")
+			local CircleCorner = Instance.new("UICorner")
+
+			Circle.Name = "Circle"
+			Circle.Parent = Circles
+			Circle.AnchorPoint = Vector2.new(0, 0.5)
+			Circle.BackgroundColor3 = Color3.fromRGB(1, 124, 255)
+			Circle.BorderSizePixel = 0
+			Circle.Position = UDim2.new(0, (i - 1) * 13, 0.5, 0)
+			Circle.Size = UDim2.new(0, 12, 0, 12)
+
+			CircleCorner.CornerRadius = UDim.new(0, 100)
+			CircleCorner.Name = "CircleCorner"
+			CircleCorner.Parent = Circle
+
+			table.insert(obj, Circle)
+		end
+
+		spawn(function()
+			for _ = 1,5 do wait(0.7)
+				local el = table.remove(obj)
+				table.insert(obj, 1, el)
+				for i, v in pairs(obj) do
+					if i == 1 then
+						v:TweenSize(UDim2.new(0,12,0,12),"Out","Linear",0.15,true)
+					elseif i == 4 then
+						v:TweenSize(UDim2.new(0,0,0,0),"Out","Linear",0.15,true)
+						wait(0.15)
+						v:TweenPosition(UDim2.new(0,0,0.5,0),"Out","Quad",0)
+					end
+						v:TweenPosition(UDim2.new(0,i * 13,0.5,0),"Out","Quad",0.35)
+				end	
+			end
+		end)
+	end
 
 	local Tabs = {}
 	function Tabs.NewTab(TabName)
