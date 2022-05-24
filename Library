@@ -727,6 +727,22 @@ function UILibrary.Main(PrjName,HideKey)
 				ProgressCorner.Name = "ProgressCorner"
 				ProgressCorner.Parent = Progress
 
+				local Mouse = game.Players.LocalPlayer:GetMouse()
+
+				local function UpdateSlider(val)
+					local percent = (Mouse.X - Progress.AbsolutePosition.X) / Progress.AbsoluteSize.X
+
+					if val then
+						percent = (val - min) / (max - min)
+					end
+
+					percent = math.clamp(percent, 0, 1)
+
+					Progress:TweenSize(UDim2.new(percent, 0, 1, 0),"Out","Sine",0.3,true)
+				end
+
+				UpdateSlider(defvalue)
+
 				local IsSliding,Dragging = false
 				local RealValue = defvalue
 				local value
@@ -1047,11 +1063,11 @@ function UILibrary.Main(PrjName,HideKey)
 
 
 					IsSelectableChoosed.Name = "IsChoosedVal"
-					
+
 					SelectableButton.MouseButton1Click:Connect(function()
 						if not IsMulti then
-                            IsSelectableChoosed.Value = true
-                            spawn(function() func(Text,val) end)
+							IsSelectableChoosed.Value = true
+							spawn(function() func(Text,val) end)
 							InnerCircle:TweenSize(UDim2.new(0,12,0,12),"In","Sine",0.15,true)
 							TweenService:Create(ChoosedCircle,TweenInfo.new(0.15),{BackgroundTransparency = 0}):Play()
 							TweenService:Create(ChoosedCircleStroke,TweenInfo.new(0.15),{Thickness = 0}):Play()
@@ -1090,11 +1106,11 @@ function UILibrary.Main(PrjName,HideKey)
 				end
 
 				for _,str in next,Selectables do
-                    if not IsMulti then
-					    NewSelectable(tostring(_),str)
-                    else
-                        NewSelectable(tostring(_))
-                    end
+					if not IsMulti then
+						NewSelectable(tostring(_),str)
+					else
+						NewSelectable(tostring(_))
+					end
 				end
 
 				function Drop.Refresh(TableToRefresh)
@@ -1104,11 +1120,11 @@ function UILibrary.Main(PrjName,HideKey)
 							v:Destroy()
 						end
 					end
-                    if not IsMulti then
-					    NewSelectable(tostring(_),str)
-                    else
-                        NewSelectable(tostring(_))
-                    end
+					if not IsMulti then
+						NewSelectable(tostring(_),str)
+					else
+						NewSelectable(tostring(_))
+					end
 				end
 				return Drop;
 			end
