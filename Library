@@ -9,14 +9,15 @@ local UILibrary ={
 }
 
 for i,v in next,game.CoreGui:GetChildren() do
-	if v.Name == "Library Test" then
+	if v.Name == "Library" then
 		v:Destroy()
 	end
 end
 
-_G.IsInPlay = true
+
 
 function UILibrary.Main(PrjName,HideKey)
+    local Tabs = {}
 	local Library = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
 	local HideMain = Instance.new("Frame")
@@ -37,12 +38,8 @@ function UILibrary.Main(PrjName,HideKey)
 
 	--Properties:
 
-	Library.Name = "Library Test"
-	if _G.IsInPlay then
-		Library.Parent = game.CoreGui
-	else
-		Library.Parent = game.StarterGui
-	end
+	Library.Name = "Library"
+	Library.Parent = game.CoreGui
 	Library.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	Main.Name = "Main"
@@ -242,7 +239,7 @@ function UILibrary.Main(PrjName,HideKey)
 		local obj = {}
 
 		Circles.Name = "Circles"
-		Circles.Parent = FadeBackgroundFrame
+		Circles.Parent = Main
 		Circles.AnchorPoint = Vector2.new(0.5, 0.5)
 		Circles.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
 		Circles.BackgroundTransparency = 1
@@ -294,7 +291,6 @@ function UILibrary.Main(PrjName,HideKey)
 		end)
 	end
 
-	local Tabs = {}
 	function Tabs.NewTab(TabName)
 
 		local Frame = Instance.new("Frame")
