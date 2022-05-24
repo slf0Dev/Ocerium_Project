@@ -1051,7 +1051,7 @@ function UILibrary.Main(PrjName,HideKey)
 					
 					SelectableButton.MouseButton1Click:Connect(function()
 						if not IsMulti then
-							spawn(function() func(Text) end)
+							spawn(function() func(Text,IsSelectableChoosed.Value) end)
 							IsSelectableChoosed.Value = true
 							InnerCircle:TweenSize(UDim2.new(0,12,0,12),"In","Sine",0.15,true)
 							TweenService:Create(ChoosedCircle,TweenInfo.new(0.15),{BackgroundTransparency = 0}):Play()
@@ -1066,7 +1066,7 @@ function UILibrary.Main(PrjName,HideKey)
 								end
 							end
 						else
-							spawn(function() func(IsSelectableChoosed.Value) end)
+							spawn(function() func(Text,IsSelectableChoosed.Value) end)
 							if IsSelectableChoosed.Value then
 								IsSelectableChoosed.Value = false
 								InnerCircle:TweenSize(UDim2.new(0,0,0,0),"In","Sine",0.15,true)
