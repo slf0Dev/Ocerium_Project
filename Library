@@ -14,7 +14,7 @@ for i,v in next,game.CoreGui:GetChildren() do
 	end
 end
 
-function Library.Loader()
+function UILibrary.Loader()
     local Circles = Instance.new("Frame")
     local obj = {}
 
