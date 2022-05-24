@@ -15,7 +15,6 @@ for i,v in next,game.CoreGui:GetChildren() do
 end
 
 function UILibrary.Main(PrjName,HideKey)
-	local Tabs = {}
 	local Library = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
 	local HideMain = Instance.new("Frame")
@@ -232,6 +231,7 @@ function UILibrary.Main(PrjName,HideKey)
 	UISizer.Parent = Library
 	UISizer.Scale = UILibrary["Options"]["Size"]
 
+	local Tabs = {}
 	function Tabs.NewTab(TabName)
 
 		local Frame = Instance.new("Frame")
