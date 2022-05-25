@@ -301,7 +301,7 @@ function UILibrary.Main(PrjName,HideKey)
 		Nofitication.Name = "Nofitication"
 		Nofitication.Parent = Main
 		Nofitication.AnchorPoint = Vector2.new(0.5, 0.5)
-		Nofitication.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+		Nofitication.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 		Nofitication.BackgroundTransparency = 1
 		Nofitication.BorderSizePixel = 0
 		Nofitication.Position = UDim2.new(0.3, 0, 0.5, 0)
