@@ -304,11 +304,12 @@ function UILibrary.Main(PrjName,HideKey)
 		Nofitication.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 		Nofitication.BackgroundTransparency = 1
 		Nofitication.BorderSizePixel = 0
-		Nofitication.Position = UDim2.new(0.5, 0, 0.5, 0)
+		Nofitication.Position = UDim2.new(0.3, 0, 0.5, 0)
 		Nofitication.Size = UDim2.new(0, 350, 0, 100)
 		Nofitication.ZIndex = 3
 		TweenService:Create(FadeBackgroundFrame,TweenInfo.new(0.3),{BackgroundTransparency = 0.5}):Play()
 		TweenService:Create(Nofitication,TweenInfo.new(0.3),{BackgroundTransparency = 0}):Play()
+		Nofitication:TweenPosition(UDim2.new(0.5,0,0.5,0),"In","Quad",0.3,true)
 
 		NofiticationLabel.Name = "NofiticationLabel"
 		NofiticationLabel.Parent = Nofitication
@@ -345,6 +346,7 @@ function UILibrary.Main(PrjName,HideKey)
 			for i,v in next,Nofitication:GetDescendants() do
 				pcall(function()
 					TweenService:Create(Nofitication,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
+					Nofitication:TweenPosition(UDim2.new(0.3,0,0.5,0),"Out","Quad",0.3,true)
 					TweenService:Create(v,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
 					TweenService:Create(v,TweenInfo.new(0.3),{TextTransparency = 1}):Play()
 				end)
