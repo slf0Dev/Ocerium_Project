@@ -362,7 +362,7 @@ function UILibrary.Main(PrjName,HideKey)
 		NofiticationButton.MouseLeave:Connect(function()
 			IsMouseOnB = false
 			if not IsHolding then
-				TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 0.95}):Play()
+				TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
 			else
 				TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 0.85}):Play()
 			end	
