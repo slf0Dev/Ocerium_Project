@@ -302,11 +302,20 @@ function UILibrary.Main(PrjName,HideKey)
 		Nofitication.Parent = Main
 		Nofitication.AnchorPoint = Vector2.new(0.5, 0.5)
 		Nofitication.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+		Nofitication.BackgroundTransparency = 1
 		Nofitication.BorderSizePixel = 0
 		Nofitication.Position = UDim2.new(0.5, 0, 0.5, 0)
 		Nofitication.Size = UDim2.new(0, 350, 0, 100)
 		Nofitication.ZIndex = 3
-		TweenService:Create(FadeBackgroundFrame,TweenInfo.new(0.3),{BackgroundTransparency = 0.3}):Play()
+		TweenService:Create(FadeBackgroundFrame,TweenInfo.new(0.3),{BackgroundTransparency = 0.5}):Play()
+		
+		for i,v in next,Nofitication:GetDescendants() do
+			pcall(function()
+				TweenService:Create(Nofitication,TweenInfo.new(0.3),{BackgroundTransparency = 0}):Play()
+				TweenService:Create(v,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
+				TweenService:Create(v,TweenInfo.new(0.3),{TextTransparency = 0}):Play()
+			end)
+		end
 
 		NofiticationLabel.Name = "NofiticationLabel"
 		NofiticationLabel.Parent = Nofitication
@@ -320,6 +329,7 @@ function UILibrary.Main(PrjName,HideKey)
 		NofiticationLabel.TextColor3 = Color3.fromRGB(41, 127, 255)
 		NofiticationLabel.TextSize = 22.000
 		NofiticationLabel.TextWrapped = true
+		NofiticationLabel.TextTransparency = 1
 		NofiticationLabel.AutomaticSize = Enum.AutomaticSize.Y
 
 		NofiticationButton.Name = "NofiticationButton"
@@ -335,6 +345,7 @@ function UILibrary.Main(PrjName,HideKey)
 		NofiticationButton.Text = "OK"
 		NofiticationButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 		NofiticationButton.TextSize = 16.000
+		NofiticationButton.TextTransparency = 1
 		
 		NofiticationButton.MouseButton1Click:Connect(function()
 			TweenService:Create(FadeBackgroundFrame,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
