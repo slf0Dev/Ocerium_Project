@@ -339,10 +339,13 @@ function UILibrary.Main(PrjName,HideKey)
 		NofiticationButton.MouseButton1Click:Connect(function()
 			IsHolding = false
 			TweenService:Create(FadeBackgroundFrame,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
-			if not IsMouseOnB then
-				TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
-			else
-				TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 0.95}):Play()
+			for i,v in next,Nofitication:GetDescendants() do
+				pcall(function()
+					TweenService:Create(v,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
+					TweenService:Create(v,TweenInfo.new(0.3),{TextTransparency = 1}):Play()
+					wait(0.4)
+					Nofitication:Destroy()
+				end)
 			end
 		end)
 		
