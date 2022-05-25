@@ -320,6 +320,7 @@ function UILibrary.Main(PrjName,HideKey)
 		NofiticationLabel.TextColor3 = Color3.fromRGB(41, 127, 255)
 		NofiticationLabel.TextSize = 22.000
 		NofiticationLabel.TextWrapped = true
+		NofiticationLabel.AutomaticSize = Enum.AutomaticSize.Y
 
 		NofiticationButton.Name = "NofiticationButton"
 		NofiticationButton.Parent = Nofitication
@@ -335,41 +336,28 @@ function UILibrary.Main(PrjName,HideKey)
 		NofiticationButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 		NofiticationButton.TextSize = 16.000
 		
-		local IsHolding,IsMouseOnB = false
 		NofiticationButton.MouseButton1Click:Connect(function()
-			IsHolding = false
 			TweenService:Create(FadeBackgroundFrame,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
 			for i,v in next,Nofitication:GetDescendants() do
 				pcall(function()
 					TweenService:Create(Nofitication,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
 					TweenService:Create(v,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
 					TweenService:Create(v,TweenInfo.new(0.3),{TextTransparency = 1}):Play()
-					wait(0.4)
+					wait(0.5)
 					Nofitication:Destroy()
 				end)
 			end
 		end)
 		
 		NofiticationButton.MouseEnter:Connect(function()
-			IsMouseOnB = true
-			if not IsHolding then
-				TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 0.95}):Play()
-			else
-				TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 0.85}):Play()
-			end	
+			TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 0.95}):Play()
 		end)
 		
 		NofiticationButton.MouseLeave:Connect(function()
-			IsMouseOnB = false
-			if not IsHolding then
-				TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
-			else
-				TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 0.85}):Play()
-			end	
+			TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
 		end)
 		
 		NofiticationButton.MouseButton1Down:Connect(function()
-			IsHolding = true
 			TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 0.85}):Play()
 		end)
 
