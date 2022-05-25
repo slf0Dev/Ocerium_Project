@@ -341,6 +341,7 @@ function UILibrary.Main(PrjName,HideKey)
 			TweenService:Create(FadeBackgroundFrame,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
 			for i,v in next,Nofitication:GetDescendants() do
 				pcall(function()
+					TweenService:Create(Nofitication,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
 					TweenService:Create(v,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
 					TweenService:Create(v,TweenInfo.new(0.3),{TextTransparency = 1}):Play()
 					wait(0.4)
