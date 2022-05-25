@@ -308,14 +308,7 @@ function UILibrary.Main(PrjName,HideKey)
 		Nofitication.Size = UDim2.new(0, 350, 0, 100)
 		Nofitication.ZIndex = 3
 		TweenService:Create(FadeBackgroundFrame,TweenInfo.new(0.3),{BackgroundTransparency = 0.5}):Play()
-		
-		for i,v in next,Nofitication:GetDescendants() do
-			pcall(function()
-				TweenService:Create(Nofitication,TweenInfo.new(0.3),{BackgroundTransparency = 0}):Play()
-				TweenService:Create(v,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
-				TweenService:Create(v,TweenInfo.new(0.3),{TextTransparency = 0}):Play()
-			end)
-		end
+		TweenService:Create(Nofitication,TweenInfo.new(0.3),{BackgroundTransparency = 0}):Play()
 
 		NofiticationLabel.Name = "NofiticationLabel"
 		NofiticationLabel.Parent = Nofitication
@@ -360,6 +353,8 @@ function UILibrary.Main(PrjName,HideKey)
 			Nofitication:Destroy()
 		end)
 		
+		
+		
 		NofiticationButton.MouseEnter:Connect(function()
 			TweenService:Create(NofiticationButton,TweenInfo.new(0.3),{BackgroundTransparency = 0.95}):Play()
 		end)
@@ -375,6 +370,13 @@ function UILibrary.Main(PrjName,HideKey)
 		NofiticationButtonCorner.CornerRadius = UDim.new(0, 5)
 		NofiticationButtonCorner.Name = "NofiticationButtonCorner"
 		NofiticationButtonCorner.Parent = NofiticationButton
+		
+		for i,v in next,Nofitication:GetDescendants() do
+			if v.ClassName == "TextButton" or v.ClassName == "TextLabel" then
+				TweenService:Create(v,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
+				TweenService:Create(v,TweenInfo.new(0.3),{TextTransparency = 0}):Play()
+			end
+		end
 	end
 	function Tabs.NewTab(TabName)
 
