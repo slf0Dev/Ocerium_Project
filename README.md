@@ -8,3 +8,7 @@ example:
 
 # Creating a window
 
+```php
+//php code
+$foo = new BarClass();
+```
