@@ -44,3 +44,13 @@ local DisabledToggle = Section.NewToggle("Disabled Toggle",function(bool)
 end,false) -- "false" is the default value of toggle
 ```
 
+# Adding Sliders
+
+```lua
+local SliderPrecise = section.NewSlider("Slider precise",0,100,true,function(value)
+
+end,25)
+local SliderNotPrecise = section.NewSlider("Slider not precise",0,100,false,function(value)
+
+end,75)
+```
