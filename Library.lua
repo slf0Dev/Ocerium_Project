@@ -665,7 +665,6 @@ function UILibrary.Main(PrjName,HideKey)
 
 
 				Toggle.MouseButton1Click:Connect(function()
-					spawn(function() UserFunc(IsToggled) end)
 					if IsToggled then
 						IsToggled = false
 						HideChecker:TweenSize(UDim2.new(1,0,1,0),"Out","Sine",0.1,true)
@@ -673,6 +672,7 @@ function UILibrary.Main(PrjName,HideKey)
 						IsToggled = true
 						HideChecker:TweenSize(UDim2.new(0,0,0,0),"In","Sine",0.1,true)
 					end
+					spawn(function() UserFunc(IsToggled) end)
 				end)
 
 				Toggle.MouseEnter:Connect(function()
