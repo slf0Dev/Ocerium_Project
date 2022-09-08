@@ -3,7 +3,7 @@ local InputService = game:GetService("UserInputService")
 
 local Library = {
 	["Theme"] = {
-		["Font"] = "Gotham",
+		["Font"] = "RobotoMono",
         ["AccentColor"] = Color3.fromRGB(0,175,255),
         ["FontColor"] = Color3.fromRGB(255,255,255),
         ["HideKey"] = "LeftAlt"
@@ -522,10 +522,10 @@ function Library.Main(Name,X,Y)
                     Position = UDim2.new(0,0,0,0);
                     Size = UDim2.new(0.95,0,0,20);
                     Font = Enum.Font[Library["Theme"]["Font"]];
-                    Text = "  " .. Text;
+                    Text = Text;
                     TextSize = 16;
                     TextColor3 = Darker(Library["Theme"]["FontColor"],1.5);
-                    TextXAlignment = Enum.TextXAlignment.Left;
+                    TextXAlignment = Enum.TextXAlignment.Center;
                     TextYAlignment = Enum.TextYAlignment.Center;
                     AutoButtonColor = false;
                 })
@@ -668,7 +668,7 @@ function Library.Main(Name,X,Y)
                     Parent = Checkbox;
                     Name = "Stroke";
                     Thickness = 1;
-                    Color = Color3.fromRGB(255,255,255);
+                    Color = Color3.fromRGB(40,40,40);
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
                 })
 
@@ -678,7 +678,7 @@ function Library.Main(Name,X,Y)
                     BackgroundTransparency = 1;
                     BorderSizePixel = 0;
                     BorderColor3 = Color3.fromRGB(60,60,60);
-                    Position = UDim2.new(0,22,0,0);
+                    Position = UDim2.new(0,27,0,0);
                     Size = UDim2.new(1,-25,1,0);
                     Font = Enum.Font[Library["Theme"]["Font"]];
                     Text = Text;
@@ -702,7 +702,7 @@ function Library.Main(Name,X,Y)
                     BackgroundColor3 = (IsActive.Value and Library["Theme"]["AccentColor"] or not IsActive.Value and Darker(Color3.fromRGB(32,32,37),1.15));
                     BorderSizePixel = 0;
                     AnchorPoint = Vector2.new(0,0.5);
-                    Position = UDim2.new(0,0,0.5,0);
+                    Position = UDim2.new(0,5,0.5,0);
                     Size = UDim2.new(0,15,0,15);
                 })
 
