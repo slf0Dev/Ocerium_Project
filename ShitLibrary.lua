@@ -3,7 +3,7 @@ local InputService = game:GetService("UserInputService")
 
 local Library = {
 	["Theme"] = {
-		["Font"] = "RobotoMono",
+		["Font"] = "Gotham",
         ["AccentColor"] = Color3.fromRGB(0,175,255),
         ["FontColor"] = Color3.fromRGB(255,255,255),
         ["HideKey"] = "LeftAlt"
@@ -656,6 +656,14 @@ function Library.Main(Name,X,Y)
                     TextSize = 16;
                     TextXAlignment = Enum.TextXAlignment.Left;
                     AutoButtonColor = false;
+                })
+
+                local Stroke = CreateModule.Instance("UIStroke",{
+                    Parent = Checkbox;
+                    Name = "Stroke";
+                    Thickness = 1;
+                    Color = Color3.fromRGB(40,40,40);
+                    ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
                 })
 
                 local Label = CreateModule.Instance("TextLabel",{
