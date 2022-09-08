@@ -1,6 +1,6 @@
 local TweenService = game:GetService("TweenService")
 local InputService = game:GetService("UserInputService")
---dd
+
 local Library = {
 	["Theme"] = {
 		["Font"] = "Gotham",
@@ -658,11 +658,17 @@ function Library.Main(Name,X,Y)
                     AutoButtonColor = false;
                 })
 
-                local Stroke = CreateModule.Instance("UIStroke",{
+                local Corner1 = CreateModule.Instance("UICorner",{
+                    Parent = Checkbox;
+                    Name = "Corner";
+                    CornerRadius = UDim.new(0,5);
+                })
+
+                local Stroke1 = CreateModule.Instance("UIStroke",{
                     Parent = Checkbox;
                     Name = "Stroke";
                     Thickness = 1;
-                    Color = Color3.fromRGB(40,40,40);
+                    Color = Color3.fromRGB(255,255,255);
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
                 })
 
