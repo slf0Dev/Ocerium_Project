@@ -1592,7 +1592,7 @@ function Library.ChangeTheme()
     for i,v in next,screeng:GetDescendants() do
         for ind,color in next,Library["theme"] do
             print(ind)
-            if Library["theme"][ind] == v.BackgroundColor3 then
+            if v.BackgroundColor3 and Library["theme"][ind] == v.BackgroundColor3 then
                 print(color)
             end
         end
