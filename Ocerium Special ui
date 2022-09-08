@@ -1553,6 +1553,13 @@ function Library.Main(text : string)
     end
     spawn(function()
         wait()
+        function Library.ChangeTheme()
+            for i,v in next,screeng:GetDescendants() do
+                if Library["theme"][v.BackgroundColor3] then
+                    print(Library["theme"][v.BackgroundColor3])
+                end
+            end
+        end
         SaveProperties(game.CoreGui.Ocerlib,allproperties)
         Main.Visible = false
         for c,x in next,allproperties do
