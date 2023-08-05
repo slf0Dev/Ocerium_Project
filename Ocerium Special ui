@@ -366,7 +366,7 @@ function Library.Main(text : string)
     local opened = true
 
     game:GetService("UserInputService").InputBegan:Connect(function(key,istyping)
-        if key.KeyCode == Enum.KeyCode[Library["theme"]["HideKey"]] and not istyping then
+        if key.KeyCode.Name == Enum.KeyCode[Library["theme"]["HideKey"]].Name and not istyping then
             if opened then
                 Main:TweenSize(UDim2.new(0,x / 1.1,0,y / 1.1),"Out","Quart",0.6,true)
                 for c,x in next,allproperties do
